@@ -1,0 +1,26 @@
+{
+    "name": "libeo/lbo_anonymizer",
+    "type": "typo3-cms-extension",
+    "description": "Allow anonymisation of data with a command line",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Pierre Boivin",
+            "email": "pierre.boivin@libeo.com"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^13.0",
+        "fakerphp/faker": "^1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Libeo\\LboAnonymizer\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "lbo_anonymizer"
+        }
+    }
+}
