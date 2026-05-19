@@ -3,7 +3,7 @@ Use the php faker library to anonymize data in TYPO3 database.
 ## Usage
 
 ```bash
-typo3cms lbo-anonymizer:anonymize
+vendor/bin/typo3 lbo-anonymizer:anonymize
 ```
 
 ## Example of configuration

@@ -6,10 +6,3 @@ services:
   Libeo\LboAnonymizer\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
-  Libeo\LboAnonymizer\Command\AnonymizeCommand:
-    tags:
-      -
-        name: console.command
-        command: 'lbo-anonymizer:anonymize'
-        description: 'Anonymize data'
-        schedulable: true

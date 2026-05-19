@@ -7,6 +7,7 @@ namespace Libeo\LboAnonymizer\Command;
 use Libeo\LboAnonymizer\Command\Operation\OperationStrategy;
 use Libeo\LboAnonymizer\Command\Operation\TruncateOperation;
 use Libeo\LboAnonymizer\Command\Operation\UpdateOperation;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -14,17 +15,16 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 
+#[AsCommand(
+    name: 'lbo-anonymizer:anonymize',
+    description: 'Anonymize data',
+)]
 class AnonymizeCommand extends Command
 {
     public function __construct(
         private readonly ConnectionPool $connectionPool
     ) {
         parent::__construct();
-    }
-
-    protected function configure(): void
-    {
-        $this->setDescription('Anonymize data');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
